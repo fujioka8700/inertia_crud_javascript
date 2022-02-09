@@ -1,0 +1,5 @@
+hello
+こんにちは
+<?php
+
+phpinfo();
