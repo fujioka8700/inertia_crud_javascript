@@ -8,7 +8,6 @@ mix.js('src/app.js', 'dist').setPublicPath('dist')
         files: [
             "*.*",
         ],
-
         open: false,
         reloadOnRestart: true,
     }
