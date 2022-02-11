@@ -28,5 +28,10 @@
       <div>
           (<?php echo $kyoka ?>)
       </div>
+      <div>
+      <?php
+        echo '国語の点数:' . $data['国語'];
+      ?>
+      </div>
   </body>
 </html>
