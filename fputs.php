@@ -23,15 +23,16 @@ fclose($f);
 <html>
   <head>
     <meta charset="utf-8">
-    <title>fputsによるファイルの保存</title>
+    <title>簡単なメモ書きアプリ</title>
   </head>
   <body>
-      <h1>fputsによるファイルの保存</h1>
-      <form action="./fputs.php" method="post">
-        <input type="text" name="text1" id="">
-        <input type="submit" value="送信">
-      </form>
-      <hr>
-      <p><?php echo $result; ?></p>
+    <h1>簡単なメモ書きアプリ</h1>
+    <p>fputsによるファイルの保存</p>
+    <form action="./fputs.php" method="post">
+      <input type="text" name="text1" id="">
+      <input type="submit" value="送信">
+    </form>
+    <hr>
+    <p><?php echo $result; ?></p>
   </body>
 </html>
