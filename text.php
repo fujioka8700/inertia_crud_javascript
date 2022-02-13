@@ -10,7 +10,7 @@ if ($_POST['text2'] != null) {
   $str3 = $_POST['text3'];
   $num1 = $_POST['number1'];
   $pos1 = strpos($str2, $str3, $num1);
-  $pos2 = mb_strpos($str2, $str3, $num1);
+  $pos2 = mb_strpos($str2, $str3, $num1, "UTF-8");
 }
 ?>
 <!DOCTYPE html>
