@@ -1,11 +1,16 @@
 <?php
-$result = '';
 $str = '';
+
+function getBoldStr($s) {
+  $str = htmlspecialchars(strtoupper($s));
+  $res = str_replace('PHP', '<span style="font-weight:bold;color:red;">PHP</span>', $str);
+  return $res;
+}
+
 if ($_GET != null) {
   $str = $_GET['text1'];
-  $str = htmlspecialchars(strtoupper($str));
-  $result = str_replace('PHP', '<b>PHP</b>', $str);
 }
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -14,12 +19,12 @@ if ($_GET != null) {
     <title>関数</title>
   </head>
   <body>
-    <h1>関数</h1>
-    <?php echo $result; ?>
+    <h1><?php echo getBoldStr("関数PHP"); ?></h1>
+    <?php echo getBoldStr($str); ?>
     <hr>
-    <p>ここに、「PHP」という文字を含む文章を書いてください。</p>
+    <p><?php echo getBoldStr("ここに、「PHP」という文字を含む文章を書いてください。"); ?></p>
     <form action="./strtoupper.php" method="get">
-      <textarea name="text1" id="" cols="20" rows="5"></textarea><br>
+      <textarea name="text1" id="" cols="20" rows="5"><?php echo $str; ?></textarea><br>
       <input type="submit" value="送信">
     </form>
     <hr>
