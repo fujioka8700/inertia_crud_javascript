@@ -91,7 +91,11 @@ $footer_obj->setBody("PHPビギナーズ");
   </head>
   <body>
     <h1><?php $title_obj->writeRenderText(); ?></h1>
-    <p><?php $rep_obj->writeRenderText(); ?></p>
+    <p><?php
+    if ($rep_obj) {
+      $rep_obj->writeRenderText();
+    }
+    ?></p>
     <hr>
     <p><?php $msg_obj->writeRenderText(); ?></p>
     <form action="./subclass.php" method="get">
