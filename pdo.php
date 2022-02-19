@@ -14,8 +14,6 @@ try {
   $result = "#ERR: " . $e->getMessage();
 }
 
-// データベースとの切断。リソースの開放。
-// unset($pdo);でも可能
 $pdo = null;
 ?>
 <!DOCTYPE html>
@@ -31,6 +29,31 @@ $pdo = null;
   </head>
   <body>
     <h1>Hello PHP!</h1>
+    <table>
+      <form action="./add.php" method="post">
+        <tr>
+          <th>NAME</th>
+          <td><input type="text" name="name" id=""></td>
+        </tr>
+        <tr>
+          <th>MAIL</th>
+          <td><input type="text" name="mail" id=""></td>
+        </tr>
+        <tr>
+          <th>TEL</th>
+          <td><input type="text" name="tel" id=""></td>
+        </tr>
+        <tr>
+          <th>MEMO</th>
+          <td><textarea name="memo"></textarea></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><input type="submit" value="送信"></td>
+        </tr>
+      </form>
+    </table>
+    <hr>
     <table>
       <tr>
         <th>ID</th>
