@@ -1,7 +1,7 @@
 <?php
 $result = '';
 try {
-  $pdo = new PDO('mysql:host=localhost;dbname=mysampledata;charset=utf8mb4', 'dog2', 'dogdog');
+  $pdo = new PDO('mysql:host=localhost:3306;dbname=mysampledata;charset=utf8mb4', 'dog2', 'dogdog');
   $statement = $pdo->query('select * from sampledata');
   while($record = $statement->fetch(PDO::FETCH_ASSOC)) {
     $result .= '<tr>';
