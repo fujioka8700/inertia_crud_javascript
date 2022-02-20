@@ -51,6 +51,23 @@ $pdo = null;
     </table>
     <hr>
     <table>
+      <form action="./update.php" method="post">
+        <tr>
+          <th>更新するID</th>
+          <td><input type="number" name="up_id" id="" min="0" value="0"></td>
+        </tr>
+        <tr>
+          <th>更新する名前</th>
+          <td><input type="text" name="name" id=""></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><input type="submit" value="送信"></td>
+        </tr>
+      </form>
+    </table>
+    <hr>
+    <table>
       <form action="./remove.php" method="post">
         <tr>
           <th>削除する名前</th>
