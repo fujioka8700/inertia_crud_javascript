@@ -51,6 +51,19 @@ $pdo = null;
     </table>
     <hr>
     <table>
+      <form action="./remove.php" method="post">
+        <tr>
+          <th>削除する名前</th>
+          <td><input type="text" name="name" id=""></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><input type="submit" value="送信"></td>
+        </tr>
+      </form>
+    </table>
+    <hr>
+    <table>
       <tr>
         <th>ID</th>
         <th>Name</th>
