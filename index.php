@@ -1,25 +1,24 @@
 <?php
-    if (isset($_POST['text1'])) {
-        $input = $_POST['text1'];
-        $result = "あなたは、「{$input}」と書きました。";
-    } else {
-        $result = 'なにか書いてください。';
-    }
+$price = 12301;
+$total = $price * 1.10;
+$amari = $total % 2;
+$result = "";
+if ($amari == 0) {
+    $result = "偶数です";
+} else {
+    $result = "奇数です";
+}
 ?>
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
-    <title>formからの送信</title>
+    <title>Hello PHP</title>
   </head>
   <body>
-      <h1>formからの送信</h1>
-      <div>
-          <?php echo $result ?>
-      </div>
-      <form action="./form.php" method="post">
-          <input type="text" name="text1" id="">
-          <input type="submit" value="送信">
-      </form>
+    <h1>Hello PHP</h1>
+    <p>
+        <?php echo $result; ?>
+    </p>
   </body>
 </html>
