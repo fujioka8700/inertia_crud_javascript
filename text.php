@@ -1,3 +1,13 @@
+<?php
+$result = "";
+$lines = @file("data.txt") or $result = "ファイルが読めません";
+if ($lines != null) {
+    for ($i=0; $i < count($lines); $i++) {
+        if ($lines[$i] == "\n") continue;
+        $result .= ($i + 1) . ": " . $lines[$i] . "<br>";
+    }
+}
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -5,6 +15,6 @@
     <title>Hello PHP</title>
   </head>
   <body>
-      <p><?php $str = readfile("data.txt"); ?></p>
+      <?php echo $result; ?>
   </body>
 </html>
